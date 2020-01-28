@@ -1,0 +1,36 @@
+<div>
+  <form class="example-form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <mat-form-field class="example-full-width">
+      <input
+        id="username"
+        name="username"
+        ngModel
+        required
+        matInput
+        placeholder="username"
+        type="text">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input
+        id="password"
+        name="password"
+        ngModel
+        required  
+        matInput
+        placeholder="password"
+        type="password">
+    </mat-form-field>
+    <button
+      mat-button
+      type="submit"
+      [disabled]="!authForm.valid"
+      >{{ isLoginMode ? 'Login' : 'Register'}}</button>
+    <button
+      mat-button
+      type="button"
+      (click)="isLoginMode = !isLoginMode"
+      >Switch to {{ isLoginMode ? 'Signup' : 'Login'}}
+    </button
+    >
+  </form>
+</div>
