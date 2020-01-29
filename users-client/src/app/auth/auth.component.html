@@ -1,6 +1,6 @@
-<div>
-  <form class="example-form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
-    <mat-form-field class="example-full-width">
+<div class="form-container">
+  <form class="user-form" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <mat-form-field class="field-full-width">
       <input
         id="username"
         name="username"
@@ -10,7 +10,7 @@
         placeholder="username"
         type="text">
     </mat-form-field>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="field-full-width">
       <input
         id="password"
         name="password"
